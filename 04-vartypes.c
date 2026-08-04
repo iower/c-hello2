@@ -69,5 +69,16 @@ int main(void)
 	BYTE byte1 = 22;
 	printf("byte1 = %d\n", byte1);
 
+	// sizeof
+
+	int len = printf("Hello");
+	printf("len \"Hello\" = %lu\n", len);
+
+	size_t size = sizeof printf("Hello");
+	printf("sizeof \"Hello\" = %lu\n", size);
+
+	size_t size2 = sizeof sizeof(int);
+	printf("sizeof sizeof(int) = %lu\n", size2);
+
 	return 0;
 }
