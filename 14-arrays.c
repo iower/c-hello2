@@ -48,5 +48,25 @@ int main(void)
 	// constNumbers[1] = 22;
 	// printf("constNumbers[1] = %d", constNumbers[1]);
 
+	int numbers2d[3][2] = { {1, 2}, {4,5}, {7, 8} };
+	// int numbers2d[3][2] = { 11, 22, 44, 55, 77, 88 };
+	printf("numbers[1][0] = %d\n", numbers2d[1][0]);
+
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 2; j++)
+		{
+			printf("[%d][%d] = %d\n", i, j, numbers2d[i][j]);
+		}
+	}
+
+	// strings
+	char message[] = "Hello";
+	printf("message: %s\n", message);
+	for (size_t i = 0; i < sizeof(message) / sizeof(char); i++)
+	{
+		printf("%ld\t%d\t%c\n", i, message[i], message[i]);
+	}
+
 	return 0;
 }
