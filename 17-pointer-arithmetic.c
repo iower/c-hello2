@@ -47,5 +47,15 @@ int main(void)
 	ptrdiff_t dist = p2 - p1;
 	printf("dict %td\n", dist);
 
+	// void pointers
+	int num1 = 11;
+	int num2 = 22;
+	int num3 = 33;
+	int num4 = 44;
+
+	void* p_num = &num1;
+	printf("*p_num %d\n", *(int*)(p_num + 8));
+	printf("*p_num %d\n", *(((int*)p_num) + 2) );
+
 	return 0;
 }
