@@ -32,8 +32,19 @@ int main(void)
 	}
 
 	// iterate multidimensional array
-	int ar[3][4] = {{11, 12, 13, 14}, {21, 22, 23, 24}, {31, 32, 33, 34}};
+	int array[3][4] = {{11, 12, 13, 14}, {21, 22, 23, 24}, {31, 32, 33, 34}};
+	int n = sizeof(array) / sizeof(array[0]);
+	int m = sizeof(array[0]) /sizeof(array[0][0]);
 
+	int *final = array[0] + n * m - 1;
+	for(int *p = array[0], i = 1; p <= final; p++, i++)
+	{
+		printf("%d \t", *p);
+		if (i % m == 0)
+		{
+			printf("\n");
+		}
+	}
 
 	return 0;
 }
