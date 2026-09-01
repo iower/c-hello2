@@ -23,5 +23,16 @@ int main(void)
 
 	// char str2[5] = "abcdefg"; // warning
 	// print_str(str2, sizeof str2);
+
+	// string as char pointer
+	char *hello = "Hello!";
+	printf("pointer size %ld\n", sizeof hello);
+	printf("%s\n", hello);
+
+	// string interning
+	char *s1 = "the same string";
+	char *s2 = "the same string";
+	printf("s1 addr %p %p\n", &s1, &s1[0]);
+	printf("s2 addr %p %p\n", &s2, &s2[0]);
 }
 
